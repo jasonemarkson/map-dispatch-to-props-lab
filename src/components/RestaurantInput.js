@@ -24,7 +24,7 @@ export class RestaurantInput extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
     // add missing code
-    // event.mapDispatchToProps
+    mapDispatchToProps()
     console.log(event.target)
   }
 
@@ -56,7 +56,7 @@ const mapDispatchToProps = dispatch => {
     addRestaurant: () => {
       dispatch({
         type: "ADD_RESTAURANT",
-        restaurants: [...state.restaurants, addRestaurant]
+        restaurants: addRestaurant
       })
     }
   }
